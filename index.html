@@ -1,48 +1,13 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <script src="js/vue.min.js"></script>
-    <script src="js/qrious.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <title>Gerador de QRCode</title>
-</head>
-
-<body>
-    <div id="app">
-        <h1>{{ title }}</h1>
-        <div class="input_qr">
-            <input type="text" v-model="text" placeholder="Digite o texto para gerar o QRCode"> 
-        </div>
-        <div class="output" v-if="text">
-            <img :src="newQRCode" alt="QR Code"> 
-        </div>
-    </div>
-    <script>
-        new Vue({
-            el: '#app',
-            data: {
-                title: 'Gerador de QRCode',
-                text: ''
-            },
-            computed: {
-                newQRCode() {
-                    // Prevenção de erro
-                    if (!this.text) return ''; 
-                    
-                    // Cria e configura o QR Code
-                    const qr = new QRious({
-                        value: this.text,
-                        size: 300
-                    });
-                    
-                    // Converte o QR Code para o formato de imagem que a tag <img> entende
-                    return qr.toDataURL(); 
-                }
-            }
-        })
-    </script>
-</body>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qrcode-generator</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
