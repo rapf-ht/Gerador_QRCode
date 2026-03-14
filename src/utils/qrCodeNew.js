@@ -1,9 +1,8 @@
-export function downloadQRCode (qrRef, text) {
-    const href = qrRef.current.toDataUrl()
+export function downloadQRCode(ref) {
+    const canvas = ref.current
+    const url = canvas.toDataURL('image/png')
     const link = document.createElement('a')
-    link.href = href
-    link.download = `qrcode${text}.png` // Nome do arquivo de download
-    document.body.appendChild(link) // Adiciona o link ao DOM
-    link.click() 
-    document.body.removeChild(link)
+    link.href = url
+    link.download = 'qrcode.png'
+    link.click()
 }

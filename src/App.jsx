@@ -23,7 +23,7 @@ function App() {
         <QRCodeCanvas value={text} ref={qrRef} size={250} /> {/* Componente QR code que gera o código com base no texto */}
       </div>
       <button
-        onClick={() => downloadQRCode(qrRef, text)} // Chama a função de download ao clicar
+        onClick={() => downloadQRCode(qrRef)} // Chama a função de download ao clicar
         className="mt-5 bg-green-700 text-white p-2 rounded-r hover:bg-green-400 transition-colors buttonDownload"
       >
         Baixar QR Code
