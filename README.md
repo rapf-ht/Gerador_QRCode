@@ -1,18 +1,44 @@
-# Gerador_QRCode
+# Gerador de QRCode
 
-# React + Vite
+Gerador de QRCode simples e funcional, desenvolvido como projeto de portfólio. O usuário digita um texto ou URL e o QRCode é gerado em tempo real, com opção de download da imagem.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🖥️ Tecnologias utilizadas
 
-Currently, two official plugins are available:
+- [React 19](https://react.dev/) — biblioteca para construção de interfaces
+- [Vite 7](https://vite.dev/) — bundler e ambiente de desenvolvimento
+- [Tailwind CSS v4](https://tailwindcss.com/) — estilização via classes utilitárias
+- [qrcode.react](https://github.com/zpao/qrcode.react) — geração do QRCode como componente React
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Como rodar localmente
 
-## React Compiler
+**Pré-requisitos:** Node.js instalado
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Clone o repositório
+git clone https://github.com/rapf-ht/Gerador_QRCode.git
 
-## Expanding the ESLint configuration
+# Entre na pasta
+cd Gerador_QRCode
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Instale as dependências
+npm install
+
+# Rode o servidor de desenvolvimento
+npm run dev
+```
+
+Acesse `http://localhost:5173` no navegador.
+
+## ⚙️ Scripts disponíveis
+
+| Comando | Descrição |
+|---|---|
+| `npm run dev` | Inicia o servidor de desenvolvimento |
+| `npm run build` | Gera a versão de produção na pasta `dist/` |
+| `npm run preview` | Visualiza o build de produção localmente |
+| `npm run lint` | Analisa o código com ESLint |
+
+## ✨ Funcionalidades
+
+- Geração de QRCode em tempo real
+- Download do QRCode em `.png`
